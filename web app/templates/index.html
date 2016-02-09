@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TAL | Analyse morpho-syntaxique</title>
+    <link rel="stylesheet" href="{{ static_url("style.css") }}">
+    <!-- jQuery -->
+    <script src="{{ static_url("js/jquery-2.1.3.min.js") }}"></script>
+
+</head>
+<body>
+    <div id="logo">
+        <img src="{{ static_url("img/upmc.gif") }}" alt="">
+        <h1>Thème: Analyse morphosyntaxique</h1>
+        <h3>Détecteur d'erreurs syntaxiques</h3>
+    </div>
+    <div id="page">
+        <form action="">
+            <textarea name="" id="input" placeholder="Type some text here..."></textarea>
+            <div id="output"></div>
+        </form>
+    </div>
+</body>
+<script>
+    $( function(){
+        var text = ""
+        function process_sentences(){
+            var new_text = $("#input").val()
+            console.log(text)
+            console.log(new_text)
+            if ( text != new_text ){
+                $("#output").load('/analyzer/', { "i": new_text } );
+                text = new_text;
+            }
+        }
+
+        setInterval(function(){ process_sentences(); }, 1000);
+
+        // $( function(){
+        //     $("#input").on('input',function(e){
+        //         $("#output").html( e.target.value );
+        //     });
+        // });
+    });
+</script>
+</html>

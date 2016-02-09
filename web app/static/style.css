@@ -1,0 +1,13 @@
+*{ outline: 0; padding: 0; margin: 0; }
+body{font:14px "Helvetica Neue","Helvetica",Arial,sans-serif; }
+a{text-decoration: none}
+html{background:#eee;}
+html, body {padding:0px;margin:0px;background: #fff;}
+#logo{width: 940px; margin: 10px auto; text-align: center}
+#logo h1{color: #555;}
+#page{overflow: hidden; width: 960px; margin: 30px auto; }
+#input{ float: left; width: 458px; font:14px "Helvetica Neue","Helvetica",Arial,sans-serif; min-height: 298px; border-radius: 3px 0 0 3px; border: 1px solid #ddd; padding: 10px; resize: none;}
+#output{ float: left; width: 458px; min-height: 298px; border-radius: 0 3px 3px 0; background: #f9f9f9;padding: 10px;border: 1px solid #ddd; border-width: 1px 1px 1px 0 ;}
+.small-error{background-color: #FFB4B4}
+.medium-error{background-color: #FF7F7F}
+.big-error{background-color: #E14343}
